@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE pam_mount SYSTEM "pam_mount.conf.xml.dtd">
+
+<pam_mount>
+
+	<debug enable="0" />
+
+	<mntoptions allow="nosuid,nodev,loop,encryption,fsck,nonempty,allow_root,allow_other,sec,bind" />
+
+	<logout wait="0" hup="0" term="0" kill="0" />
+	
+	<mkmountpoint enable="1" remove="true" />
+	
+	<!-- HOME TEACHERS/ADMINS -->
+	<volume fstype="cifs" uid="1042-20000" server="server" path="home" mountpoint="/run/%(USER)/home" />
+	
+	<!-- HOME STUDENTS -->
+	<volume fstype="cifs" uid="20001-30000" server="server" path="home" mountpoint="/run/%(USER)/home" options="gid=10003"  />
+	
+	<!-- SHARE -->
+	<volume fstype="cifs" uid="1042-30000" server="server" path="share" mountpoint="/run/%(USER)/share" />
+	
+	<!-- SHARE_TEACHERS-->
+	<volume fstype="cifs" uid="1042-15000" server="server" path="share_teachers" mountpoint="/run/%(USER)/teachers_share" />
+
+	<!-- GROUPS_SHARE-->
+	<volume fstype="cifs" uid="1042-30000" server="server" path="groups_share" mountpoint="/run/%(USER)/groups_share" />
+
+
+</pam_mount>

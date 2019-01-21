@@ -1,0 +1,13 @@
+#!/bin/sh
+
+USER="$PAM_USER"
+HOME="/home/$USER"
+
+export USER
+export HOME
+
+run-parts /etc/lightdm/Session.d
+
+
+exit 0
+
