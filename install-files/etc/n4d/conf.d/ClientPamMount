@@ -3,4 +3,4 @@ type=python
 path=ClientPamMount.py
 class=ClientPamMount
 [METHODS]
-configure_xml=adm,admins
+configure_xml=sudo,admins
