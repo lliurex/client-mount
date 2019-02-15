@@ -1,3 +1,9 @@
+client-mount (0.3.9) bionic; urgency=medium
+
+  * Adding sudo group
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 15 Feb 2019 09:15:12 +0100
+
 client-mount (0.3.8) bionic; urgency=medium
 
   * First bionic release
