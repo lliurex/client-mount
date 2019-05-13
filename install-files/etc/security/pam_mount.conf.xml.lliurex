@@ -7,9 +7,9 @@
 
 	<mntoptions allow="nosuid,nodev,loop,encryption,fsck,nonempty,allow_root,allow_other,sec,bind" />
 
-	<logout wait="0" hup="0" term="0" kill="0" />
-	
 	<mkmountpoint enable="1" remove="true" />
+	<logout wait="20" hup="0" term="0" kill="0" />
+	<umount>umount -lf %(MNTPT)</umount>
 	
 	<!-- HOME TEACHERS/ADMINS -->
 	<volume fstype="cifs" uid="1042-20000" server="server" path="home" mountpoint="/run/%(USER)/home" />
