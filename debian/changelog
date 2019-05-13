@@ -1,3 +1,9 @@
+client-mount (0.3.10) bionic; urgency=high
+
+  * Making sure umount works
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 13 May 2019 09:34:43 +0200
+
 client-mount (0.3.9) bionic; urgency=medium
 
   * Adding sudo group
