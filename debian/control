@@ -7,7 +7,7 @@ Standards-Version: 3.9.7
 
 Package: client-mount
 Architecture: all
-Depends: ${misc:Depends}, libpam-mount, libpam-script, cifs-utils, lightdm-classroom
+Depends: ${misc:Depends}, libpam-mount, libpam-script, cifs-utils, llx-pam-configs
 Conflicts: lliurex-gva, libpam-n4d
 Provides: libpam-n4d
 Replaces: libpam-n4d
