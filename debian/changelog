@@ -1,3 +1,9 @@
+client-mount (0.3.12) bionic; urgency=medium
+
+  * using vers=1.0 instead to support get/setfacl
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 03 Oct 2019 16:40:36 +0200
+
 client-mount (0.3.11) bionic; urgency=medium
 
   * Added vers=3.0 to silence dmesg
