@@ -1,3 +1,9 @@
+client-mount (0.3.13) bionic; urgency=medium
+
+  * Restarting n4d on update
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Fri, 04 Oct 2019 09:36:48 +0200
+
 client-mount (0.3.12) bionic; urgency=medium
 
   * using vers=1.0 instead to support get/setfacl
