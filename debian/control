@@ -1,0 +1,16 @@
+Source: client-mount
+Section: admin
+Priority: optional
+Maintainer: LliureX Team <lliurex@gva.es>
+Build-Depends: debhelper (>= 7.0), 
+Standards-Version: 3.9.7
+
+Package: client-mount
+Architecture: all
+Depends: ${misc:Depends}, libpam-mount, libpam-script, cifs-utils, llx-pam-configs, n4d
+Conflicts: lliurex-gva, libpam-n4d
+Provides: libpam-n4d
+Replaces: libpam-n4d
+Description: Client mount configuration
+ Distributes pam_mount conf file for classroom fat clients
+

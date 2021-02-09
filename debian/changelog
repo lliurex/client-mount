@@ -1,0 +1,117 @@
+client-mount (0.4) focal; urgency=medium
+
+  * First focal release
+  * Ported to python3
+  * Ported to n4d > 0.900
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 09 Feb 2021 10:49:03 +0100
+
+client-mount (0.3.13) bionic; urgency=medium
+
+  * Restarting n4d on update
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Fri, 04 Oct 2019 09:36:48 +0200
+
+client-mount (0.3.12) bionic; urgency=medium
+
+  * using vers=1.0 instead to support get/setfacl
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 03 Oct 2019 16:40:36 +0200
+
+client-mount (0.3.11) bionic; urgency=medium
+
+  * Added vers=3.0 to silence dmesg
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 22 Jul 2019 13:28:05 +0200
+
+client-mount (0.3.10-1) bionic; urgency=medium
+
+  * Removing lightdm-classroom dependency
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 16 May 2019 12:27:37 +0200
+
+client-mount (0.3.10) bionic; urgency=high
+
+  * Making sure umount works
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 13 May 2019 09:34:43 +0200
+
+client-mount (0.3.9) bionic; urgency=medium
+
+  * Adding sudo group
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 15 Feb 2019 09:15:12 +0100
+
+client-mount (0.3.8) bionic; urgency=medium
+
+  * First bionic release
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 21 Jan 2019 09:27:24 +0100
+
+client-mount (0.3.7) xenial; urgency=high
+
+  * [ClientPamMount] Code logic is reversed. First we make sure pam_mount.xml
+    is the default option on boot. After that, we try to get server ip and 
+    rewrite xml with it.
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Wed, 17 Jan 2018 10:07:06 +0100
+
+client-mount (0.3.6.1) xenial; urgency=high
+
+  * [n4d] Startup only executes configure_xml on boot
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 16 Jan 2018 14:42:27 +0100
+
+client-mount (0.3.6) xenial; urgency=high
+
+  * Using server ip instead of 'server' to mount shared folders
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 16 Jan 2018 13:10:32 +0100
+
+client-mount (0.3.5) xenial; urgency=high
+
+  * Teachers are now allowed to have access to students mount points
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Wed, 15 Mar 2017 11:30:33 +0100
+
+client-mount (0.3.4) xenial; urgency=high
+
+  * First xenial release
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 18 Feb 2016 16:46:20 +0100
+
+client-mount (0.3.3) trusty; urgency=high
+
+  * Added remaining pam step scripts to silent auth.log warnings
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Fri, 27 Nov 2015 09:37:53 +0100
+
+client-mount (0.3.2) trusty; urgency=high
+
+  * Supporting netadmin mount
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 16 Nov 2015 11:22:56 +0100
+
+client-mount (0.3.1) trusty; urgency=high
+
+  * Added lightdm-classroom dependency
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 01 Dec 2014 09:48:40 +0100
+
+client-mount (0.3) trusty; urgency=high
+
+  * Changed the way pam_mount diversion is done
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 01 Dec 2014 09:32:57 +0100
+
+client-mount (0.2) trusty; urgency=medium
+
+  * Removed pam lightdm diversion
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 25 Nov 2014 09:43:32 +0100
+
+client-mount (0.1) trusty; urgency=high
+
+  * Initial release.
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 17 Nov 2014 16:55:08 +0100
