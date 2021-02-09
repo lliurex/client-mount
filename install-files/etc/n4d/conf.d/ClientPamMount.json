@@ -1,0 +1,15 @@
+{
+    "SETUP": {
+        "type": "python",
+        "path": "ClientPamMount.py",
+        "class": "ClientPamMount"
+    },
+    "METHODS": {
+        "configure_xml": {
+            "allowed_groups": [
+                "sudo",
+                "admins"
+            ]
+        }
+    }
+}
