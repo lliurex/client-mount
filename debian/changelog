@@ -1,3 +1,9 @@
+client-mount (0.5) focal; urgency=medium
+
+  * Removed vers=1.0
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 24 May 2021 11:02:37 +0200
+
 client-mount (0.4.1) focal; urgency=medium
 
   * Fixed missing import
