@@ -12,19 +12,19 @@
 	<umount>umount -lf %(MNTPT)</umount>
 
 	<!-- HOME TEACHERS/ADMINS -->
-	<volume fstype="cifs" uid="1042-20000" server="%%SERVER%%" path="home" mountpoint="/run/%(USER)/home" options="vers=1.0" />
+	<volume fstype="cifs" uid="1042-20000" server="%%SERVER%%" path="home" mountpoint="/run/%(USER)/home"/>
 	
 	<!-- HOME STUDENTS -->
-	<volume fstype="cifs" uid="20001-30000" server="%%SERVER%%" path="home" mountpoint="/run/%(USER)/home" options="gid=10003,vers=1.0"  />
+	<volume fstype="cifs" uid="20001-30000" server="%%SERVER%%" path="home" mountpoint="/run/%(USER)/home" options="gid=10003"  />
 	
 	<!-- SHARE -->
-	<volume fstype="cifs" uid="1042-30000" server="%%SERVER%%" path="share" mountpoint="/run/%(USER)/share" options="vers=1.0" />
+	<volume fstype="cifs" uid="1042-30000" server="%%SERVER%%" path="share" mountpoint="/run/%(USER)/share" />
 	
 	<!-- SHARE_TEACHERS-->
-	<volume fstype="cifs" uid="1042-15000" server="%%SERVER%%" path="share_teachers" mountpoint="/run/%(USER)/teachers_share" options="vers=1.0" />
+	<volume fstype="cifs" uid="1042-15000" server="%%SERVER%%" path="share_teachers" mountpoint="/run/%(USER)/teachers_share" />
 
 	<!-- GROUPS_SHARE-->
-	<volume fstype="cifs" uid="1042-30000" server="%%SERVER%%" path="groups_share" mountpoint="/run/%(USER)/groups_share" options="vers=1.0" />
+	<volume fstype="cifs" uid="1042-30000" server="%%SERVER%%" path="groups_share" mountpoint="/run/%(USER)/groups_share" />
 
 
 </pam_mount>
