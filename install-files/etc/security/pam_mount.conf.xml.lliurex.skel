@@ -5,17 +5,17 @@
 
 	<debug enable="0" />
 
-	<mntoptions allow="nosuid,nodev,loop,encryption,fsck,nonempty,allow_root,allow_other,sec,bind,vers" />
+	<mntoptions allow="nosuid,nodev,loop,encryption,fsck,nonempty,allow_root,allow_other,sec,bind,vers,mfsymlinks" />
 	
 	<mkmountpoint enable="1" remove="true" />
 	<logout wait="20" hup="0" term="0" kill="0" />
 	<umount>umount -lf %(MNTPT)</umount>
 
 	<!-- HOME TEACHERS/ADMINS -->
-	<volume fstype="cifs" uid="1042-20000" server="%%SERVER%%" path="home" mountpoint="/run/%(USER)/home"/>
+	<volume fstype="cifs" uid="1042-20000" server="%%SERVER%%" path="home" mountpoint="/run/%(USER)/home" options="mfsymlinks" />
 	
 	<!-- HOME STUDENTS -->
-	<volume fstype="cifs" uid="20001-30000" server="%%SERVER%%" path="home" mountpoint="/run/%(USER)/home" options="gid=10003"  />
+	<volume fstype="cifs" uid="20001-30000" server="%%SERVER%%" path="home" mountpoint="/run/%(USER)/home" options="gid=10003,mfsymlinks"  />
 	
 	<!-- SHARE -->
 	<volume fstype="cifs" uid="1042-30000" server="%%SERVER%%" path="share" mountpoint="/run/%(USER)/share" />
