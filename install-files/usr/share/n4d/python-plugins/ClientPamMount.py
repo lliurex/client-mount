@@ -4,11 +4,16 @@ import os
 import shutil
 import tempfile
 import threading
+import time
+
+import n4d.server.core
+import n4d.responses
 
 class ClientPamMount:
 	
 	def __init__(self):
 		
+		self.core=n4d.server.core.Core.get_core()
 		self.pam_skel="/etc/security/pam_mount.conf.xml.lliurex.skel"
 		self.pam_file="/etc/security/pam_mount.conf.xml.lliurex"
 		self.key="%%SERVER%%"
@@ -60,7 +65,7 @@ class ClientPamMount:
 				
 			f.close()
 			tmp_file.close()
-			self.uchmod(filename,0644)
+			self.uchmod(filename,0o644)
 				
 			shutil.copy(filename,self.pam_file)
 			os.remove(filename)
@@ -80,22 +85,22 @@ class ClientPamMount:
 		tries=10
 		for x in range(0,tries):
 			
-			ip=objects["VariablesManager"].get_variable("SRV_IP")
-			if ip != None:
-				
-				if self.set_address(ip):
-					configured=True
-				break
+			ret=self.core.get_variable("SRV_IP")
+			if ret["status"]==0:
+				ip=ret["return"]
+				if ip != None:
+					if self.set_address(ip):
+						configured=True
+						break
 				
 			else:
 				# lets sleep and try again
 				time.sleep(1)
 		
 		if configured:
-			return {"status":True,"msg":"Configured to %s"%ip}
+			return n4d.responses.build_successful_call_response(True,"pam_mount updated to server IP")
 		else:
-			# fallback to 'server'
-			return {"status":False,"msg":"Fallen back to 'server'"}
+			return n4d.responses.build_successful_call_response(False,"Unable to resolve server. pam_mount fallen back to 'server'")
 
 	#def configure_xml
 	
