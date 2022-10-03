@@ -1,3 +1,9 @@
+client-mount (0.6.1) focal; urgency=medium
+
+  * change permissions to deny access for other users
+
+ -- Raul Rodrigo Segura <raurodse@gmail.com>  Mon, 03 Oct 2022 13:56:53 +0200
+
 client-mount (0.6) focal; urgency=medium
 
   * Fixing clients unable to create symlinks (mfsymlinks on vers=3.1.1)
